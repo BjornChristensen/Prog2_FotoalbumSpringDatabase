@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fotoalbum</title>
+  <style>
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f0f0f0;
+      border: 2px solid black;
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      border: black;
+      margin: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<h1>Fotoalbum</h1>
+<h2>Her er nogle af de kendteste broer i verden</h2>
+<div th:each="bridge : ${bridgeList}" class="grid">
+  <div class="box">
+    <h2 th:text="${bridge.name}"></h2>
+    <img th:src="@{${bridge.imageFileName}}" alt="Image missing">
+    <a th:href="@{'/bridge?name=' + ${bridge.name}}">Show more</a>
+  </div>
+</div>
+</body>
+</html>

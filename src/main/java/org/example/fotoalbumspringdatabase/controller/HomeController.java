@@ -19,6 +19,7 @@ public class HomeController {
   public String gethome(Model model) {
     System.out.println("gethome()");
     System.out.println(bridgeRepository.getAllBridges());
+//    model.addAttribute("bridgeList", bridgeRepository.getAllBridges());
     model.addAttribute("bridgeList", bridgeRepositoryDatabase.getAllBridges());
     return "home";
   }

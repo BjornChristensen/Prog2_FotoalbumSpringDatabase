@@ -11,7 +11,7 @@ public class BridgeRepository {
     private List<Bridge> bridgeList = new ArrayList<Bridge>();
 
     public BridgeRepository() {
-        bridgeList.add(new Bridge("Brooklyn_Bridge", "img/Brooklyn_Bridge.jpg",
+        bridgeList.add(new Bridge("XBrooklyn_Bridge", "img/Brooklyn_Bridge.jpg",
                 "  Brooklyn Bridge er en af tre broer,\n" +
                         "  som binder bydelene Manhattan og Brooklyn i New York sammen.\n" +
                         "  Den strækker sig 1834 meter over East River.\n" +

@@ -21,10 +21,12 @@ public class BridgeController {
     public String showBridge(@RequestParam("name") String name, Model model) {
         System.out.println("showBridge " + name);
         Bridge bridge=bridgeRepositoryDatabase.getBridge(name);
-        if(bridge!=null) {
-            model.addAttribute("bridge", bridge);
-        }
         System.out.println(bridge);
-        return "bridge";
+        if(bridge==null) {
+            model.addAttribute("bridge", bridge);
+            return "bridge";
+        } else {
+            return "Fejlmeddelelse";
+        }
     }
 }

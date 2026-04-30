@@ -22,7 +22,7 @@ public class BridgeController {
         System.out.println("showBridge " + name);
         Bridge bridge=bridgeRepositoryDatabase.getBridge(name);
         System.out.println(bridge);
-        if(bridge==null) {
+        if(bridge!=null) {
             model.addAttribute("bridge", bridge);
             return "bridge";
         } else {

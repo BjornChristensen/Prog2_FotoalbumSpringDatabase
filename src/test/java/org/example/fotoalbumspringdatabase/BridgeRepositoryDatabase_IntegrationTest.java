@@ -6,8 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 public class BridgeRepositoryDatabase_IntegrationTest {
@@ -26,5 +25,17 @@ public class BridgeRepositoryDatabase_IntegrationTest {
         // Validations
         assertNotNull(bridge, "Bridge not found");
         assertEquals(bridgeName, bridge.getName());
+    }
+
+    @Test
+    public void getBridgeExceptionFlow(){
+        // Preconditions
+        String name="Blabla";
+
+        // Execution
+        Bridge bridge=bridgeRepositoryDatabase.getBridge(name);
+
+        // Postconditions
+        assertNull(bridge);
     }
 }

@@ -23,7 +23,7 @@ public class BridgeRepositoryDatabase_IntegrationTest {
         Bridge bridge=bridgeRepositoryDatabase.getBridge(bridgeName);
 
         // Validations
-        assertNotNull(bridge, "Bridge not found");
+        assertNotNull(bridge, "Bridge not found.");
         assertEquals(bridgeName, bridge.getName());
     }
 

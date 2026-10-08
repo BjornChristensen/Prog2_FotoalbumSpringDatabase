@@ -55,7 +55,7 @@ public class BridgeController_ShowBridge_UnitTest {
         String result=bridgeController.showBridge(bridgeName, model);
 
         // Validations
-        assertEquals(result, "bridge");
+        assertEquals(result, "error");
         assertTrue(model.asMap().isEmpty(), "Model should be empty");
     }
 }

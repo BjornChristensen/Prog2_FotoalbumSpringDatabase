@@ -26,5 +26,12 @@ public class BridgeController {
         }
         System.out.println(bridge);
         return "bridge";
+
+//        if(bridge!=null) {
+//            model.addAttribute("bridge", bridge);
+//            System.out.println(bridge);
+//            return "bridge";
+//        } else return "error";
+
     }
 }

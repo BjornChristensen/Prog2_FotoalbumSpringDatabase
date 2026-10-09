@@ -23,9 +23,9 @@ public class BridgeController {
         Bridge bridge=bridgeRepositoryDatabase.getBridge(name);
         if(bridge!=null) {
             model.addAttribute("bridge", bridge);
-        }
-        System.out.println(bridge);
-        return "bridge";
+            System.out.println(bridge);
+            return "bridge";
+        } else return "error";
 
 //        if(bridge!=null) {
 //            model.addAttribute("bridge", bridge);
